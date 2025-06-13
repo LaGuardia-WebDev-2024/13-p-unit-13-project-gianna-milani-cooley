@@ -21,64 +21,70 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Gianna-Milani</h1>
     <hr />
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- color Question -->
+    <form id="color-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        <p>🌈 What is my favorite color?</p>
+        <select id="color-answer">
+          <option value="color1">Purple</option>
+          <option value="color2">Red</option>
+          <option value="color3">Tuquoise</option>
+          <option value="color4">Black</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Color Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="color-result"></div>
     <hr />
     <!-- Book Question -->
-    <form id="book-form">
+    <form id="sport-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        <p>🏅 What is my favorite sport?</p>
+        <select id="sport-answer">
+          <option value="sport1">Soccer</option>
+          <option value="sport2">Dance</option>
+          <option value="sport3">Basketball</option>
+          <option value="sport4">Football</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Sport Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="sport-result"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      //color Question jQuery Code
+      $("#color-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#color-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "color3") {
+          $("#color-result").text("YESSSS!");
+          $("#color-result").css("background-color","rgb(4, 255, 230)")
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#color-result").text("Try Again!");
         }
       });
 
-      //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      //Sport Question jQuery Code
+      $("#sport-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#sport-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+        if (answer === "sport2") {
+          $("#sport-result").text("OFC🩰💃🏽👯‍♂️!");
+          $("sport-result").img("https://img.freepik.com/free-vector/white-party-background-with-dancing-silhouettes_1048-932.jpg")
         } else {
-          $("#book-result").text("Try Again!");
+          $("#sport-result").text("Try Again!");
+          <img src"https://media.istockphoto.com/id/1153130310/photo/black-and-white-image-of-the-soccer-player-shoot-ball-on-artificial-turf.jpg?s=612x612&w=0&k=20&c=iWly_g2gGD81nTcwLEwDvhDaTs8HJ38ECe2k_snEuAQ="width= >
+             <img src"https://i.pinimg.com/474x/e1/a5/49/e1a54949800c9a6d1f46967f6034da21.jpg"width= >
+                <img src"https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/basketball-hoop-fine-art-sports-mitchell-reibel.jpg"width= >
+                   <img src"https://m.media-amazon.com/images/I/81cAI03IvHL.jpg"width= >
         }
       });
     </script>
